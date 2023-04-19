@@ -21,11 +21,7 @@ const Footer = () => (
         <div className="flex items-center justify-between flex-wrap gap-4">
           <h4 className="font-extrabold text-[24px] text-white">THE URBAN CUT STUDIO</h4>
           <p className="font-normal text-[14px] text-white opacity-50">Copyright &copy; 2023 TheUrbanCutStudio. All rights reserved.</p>
-          <div className="flex gap-4">
-            { socials.map((social) => (
-              <a href={social.link}><img key={social.name} src={social.url} className="w-[24px] h-[24px] object-contain cursor-pointer" /></a>
-            ))}
-          </div>
+          <div className="flex gap-4">{ socials.map((social) => (<a href={social.link} aria-label="social-link"><img key={social.name} src={social.url} className="w-[24px] h-[24px] object-contain cursor-pointer" /></a>))}</div>
         </div>
 
       </div>

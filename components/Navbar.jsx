@@ -4,7 +4,7 @@ import styles from '../styles';
 import { navVariants } from '../utils/motion';
 
 const Navbar = () => {
-  const [isActive, setIsActive] = useState('dashboard');
+  // const [isActive, setIsActive] = useState('dashboard');
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
   const toggleDrawer = () => setIsDrawerOpen(!isDrawerOpen);
@@ -32,12 +32,10 @@ const Navbar = () => {
         />
 
         <ul className="flex text-white gap-7 justify-center items-center sm:hidden md:hidden lg:flex">
-        <li className="hover:text-[#00FFFF] text-white"><a href="#home">Home</a></li>
-              <li className="hover:text-[#00FFFF] text-white"><a href="#services">Services</a></li>
-              <li className="hover:text-[#00FFFF] text-white"><a href="#about">About</a></li>
-              <li className="p-[10px] bg-[#063970] border-solid border-2 px-[20px] border-white rounded-xl">
-               <a href='#contact'> Contact</a>
-              </li>
+          <li className="hover:text-[#00FFFF] text-white"><a href="#home">Home</a></li>
+          <li className="hover:text-[#00FFFF] text-white"><a href="#services">Services</a></li>
+          <li className="hover:text-[#00FFFF] text-white"><a href="#about">About</a></li>
+          <li className="p-[10px] bg-[#063970] border-solid border-2 px-[20px] border-white rounded-xl"><a href="#contact"> Contact</a></li>
         </ul>
       </div>
 
@@ -47,16 +45,16 @@ const Navbar = () => {
           <div className="bg-white z-10 p-8 rounded-lg">
             <div className="flex justify-between items-center mb-4">
               <h2 className="font-bold text-2xl">TheUrbanCutStudio</h2>
-              <button onClick={toggleDrawer}>
+              <div onClick={toggleDrawer}>
                 <img src="/close.svg" alt="Close" className="w-6 h-6" />
-              </button>
+              </div>
             </div>
             <ul className="flex flex-col gap-4 text-white font-semibold">
               <li className="hover:text-[#00FFFF] text-black"><a href="#home">Home</a></li>
               <li className="hover:text-[#00FFFF] text-black"><a href="#services">Services</a></li>
               <li className="hover:text-[#00FFFF] text-black"><a href="#about">About</a></li>
               <li className="p-[10px] bg-[#063970] border-solid border-2 px-[20px] border-white rounded-xl">
-               <a href='#contact'> Contact</a>
+                <a href="#contact"> Contact</a>
               </li>
             </ul>
           </div>
